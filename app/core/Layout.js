@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
-import createApp from '../createApp.js';
+import ReactDOM from 'react-dom';
 
 export default class Layout extends Component {
+    static init(Component) {
+        ReactDOM.render(<Component />, document.getElementById('app'));
+    }
+
     render() {
         return <div>123</div>;
     }
 }
-
-createApp(Layout);
