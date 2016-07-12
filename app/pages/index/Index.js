@@ -3,7 +3,7 @@ import Layout from '../../core/Layout';
 
 @Layout.init
 export default class Index extends Layout {
-    render() {
-        return <div>543</div>
+    renderMain() {
+        return <div>首页</div>
     }
 }
