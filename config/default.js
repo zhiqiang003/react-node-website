@@ -2,8 +2,8 @@ import path from 'path';
 import packson from '../package.json';
 
 const rootPath = path.dirname(__dirname);
-const port = 8787;
 const __root = dir => path.join(rootPath, dir);
+const port = 8787;
 
 export default Object.assign({}, packson, {
     port,
@@ -18,6 +18,7 @@ export default Object.assign({}, packson, {
         app: __root('server/main.js'),
         routes: __root('server/routes'),
         extensions: __root('server/extensions'),
+        middlewares: __root('server/middlewares'),
         controllers: __root('server/controllers'),
         views: __root('server/views')
     }

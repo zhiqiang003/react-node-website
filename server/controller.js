@@ -1,7 +1,7 @@
 import Salt from 'koa-salt';
 
-import render from './middlewares/render';
-import podata from './middlewares/podata';
+import render from './extensions/render';
+import podata from './extensions/podata';
 
 export default class Controller extends Salt.Controller {
     render(dir) {
