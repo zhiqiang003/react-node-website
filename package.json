@@ -50,6 +50,7 @@
     "webpack-livereload-plugin": "^0.8.1"
   },
   "dependencies": {
+    "antd": "^1.6.5",
     "rs-page": "^0.0.2"
   }
 }
