@@ -10,10 +10,26 @@ export default Object.assign({}, packson, {
     path: {
         // client
         assets: __root('assets'),
+        css: {
+            src: __root('app/styles/sass'),
+            dest: __root('assets/css')
+        },
+        image: {
+            src: __root('app/styles/images'),
+            dest: __root('assets/images')
+        },
+        font: {
+            src: __root('app/styles/fonts'),
+            dest: __root('assets/fonts')
+        },
         js: {
             entry: __root('app/pages'),
             dest: __root('assets/scripts')
         },
+
+        fonts: {
+        },
+
         // server
         app: __root('server/main.js'),
         routes: __root('server/routes'),

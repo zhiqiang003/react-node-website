@@ -6,5 +6,5 @@ gulp.task('build:pack', (callback) => {
 });
 
 gulp.task('build:dev', (callback) => {
-    runSequence('jsx:dev', callback);
+    runSequence('clean', 'jsx:dev', 'sass', callback);
 });
