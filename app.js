@@ -12,9 +12,9 @@ require('babel-register')({
 
 require("babel-polyfill");
 
-var config = require('config');
+const config = require('config');
 
-var app = require(config.path.app);
+const app = require(config.path.app);
 
 app.start(function(err) {
     console.log('------Server is running on Port: ' + config.port);
