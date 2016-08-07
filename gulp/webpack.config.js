@@ -1,7 +1,6 @@
 import config from 'config';
 import fs from 'fs';
 import path from 'path';
-import LiveReloadPlugin from 'webpack-livereload-plugin';
 import precss from 'precss';
 import autoprefixer from 'autoprefixer';
 
@@ -21,7 +20,7 @@ export default {
     module: {
         loaders: [{
 			test: /\.(es6|js|jsx)$/,
-			exclude: /(node_modules(?!\/@youzan))/,
+			exclude: /(node_modules)/,
 			loader: 'babel-loader',
 			query: {
 				presets: ['react', 'es2015', 'stage-0'],
@@ -40,7 +39,5 @@ export default {
     },
     postcss: function() {
         return [precss, autoprefixer];
-    },
-    devtool: 'source-map',
-    plugins: [new LiveReloadPlugin()]
+    }
 }
