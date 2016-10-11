@@ -4,11 +4,13 @@
 
 ## 分支计划：
 
-* dev: 开发主分支，提供核心功能
-* master：打包用分支
-* dev-ant: 前端使用 ant 作为开发的主要前端工具
-* dev-redux: 前端使用 redux
-* dev-redux-ant: 前端使用 redux 和 ant
+* dev: 开发主分支，提供核心功能，前端默认使用ant作为 ui 基础，使用 redux 为 flux 框架
+* master：未来打包用分支
+
+## 环境限制：
+
+* node: 4.x.x
+* npm: 3.x.x
 
 
 ## 开发计划：
@@ -33,17 +35,4 @@
 
 ➣  server 的转发问题
 
-➣  单页面加载单独 css 的策略
-
-
-## draft
-
- +------dev------+
- +       |       +
- +       |       +
- +       |       +
- +      / \      +
- +     /   \     +
- +    /     \    +
- + master    ant +
-
+➣  单页面加载单独 css 的策略 √
