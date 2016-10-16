@@ -4,5 +4,5 @@ dist/
 lib/
 npm-debug.log
 node_modules/
-zent-doc/
 node_modules.tar
+.idea

@@ -16,7 +16,7 @@ gulp.task('clean:image', () => {
 
 
 gulp.task('clean:font', () => {
-    return gulp.src(config.path.font.dest, {read: false})
+    return gulp.src(config.path.fonts.dest, {read: false})
         .pipe(clean({force: true}));
 });
 

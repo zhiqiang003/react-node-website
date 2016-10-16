@@ -2,40 +2,41 @@ import path from 'path';
 import packson from '../package.json';
 
 const rootPath = path.dirname(__dirname);
-const __root = dir => path.join(rootPath, dir);
+const rooter = dir => path.join(rootPath, dir);
 const port = 8787;
 
 export default Object.assign({}, packson, {
-    port,
-    path: {
-        // client
-        assets: __root('assets'),
-        css: {
-            src: __root('app/styles/sass'),
-            dest: __root('assets/css')
-        },
-        image: {
-            src: __root('app/styles/images'),
-            dest: __root('assets/images')
-        },
-        font: {
-            src: __root('app/styles/fonts'),
-            dest: __root('assets/fonts')
-        },
-        js: {
-            entry: __root('app/pages'),
-            dest: __root('assets/scripts')
-        },
+  port,
+  backend: {
+    v1: 'http://139.198.2.252:9000/v1'
+  },
+  path: {
+    root: rootPath,
+    // client
+    assets: rooter('assets'),
+    css: {
+      src: rooter('app/styles/sass'),
+      dest: rooter('assets/css')
+    },
+    image: {
+      src: rooter('app/styles/images'),
+      dest: rooter('assets/images')
+    },
+    fonts: {
+      src: rooter('app/styles/fonts'),
+      dest: rooter('assets/fonts')
+    },
+    js: {
+      entry: rooter('app/pages'),
+      dest: rooter('assets/scripts')
+    },
 
-        fonts: {
-        },
-
-        // server
-        app: __root('server/main.js'),
-        routes: __root('server/routes'),
-        extensions: __root('server/extensions'),
-        middlewares: __root('server/middlewares'),
-        controllers: __root('server/controllers'),
-        views: __root('server/views')
-    }
+    // server
+    app: rooter('server/main.js'),
+    routes: rooter('server/routes'),
+    extensions: rooter('server/extensions'),
+    middlewares: rooter('server/middlewares'),
+    controllers: rooter('server/controllers'),
+    views: rooter('server/views')
+  }
 });
